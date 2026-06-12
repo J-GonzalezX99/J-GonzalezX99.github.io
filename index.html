@@ -5,7 +5,7 @@
   />
 <style>
 	    /* --------------------------------------NOTE---------------------------------------- */
-    /* THIS TEMPLATE IS BUILT TO BE MOBILE FIRST - USE YOUR MEDIA QUERIES FOR THE LARGER SIZES
+    /* THIS IS BUILT TO BE MOBILE FIRST - USE MEDIA QUERIES FOR THE LARGER SIZES
     
     Reference documentation: https://getbootstrap.com/docs/4.0/getting-started/introduction/
     ---------*/
@@ -155,7 +155,7 @@
         background: url('img/hero-bg.jpg') no-repeat center;
         background-color: black;
         background-size: cover;
-      padding-top: 8vh;
+      	padding-top: 8vh;
         padding-bottom: 8vh; 
     }
 
@@ -210,14 +210,6 @@
     /* SECTION FIVE */
     /* SECTION SIX */
 
-
-    @media (min-width: 576px) {
-        #portfolioSite .secThree .contentBox {
-/*             height: 35%; */
-            padding: 20px;
-        }
-    }
-
 /* Gallery Hover Effects */    
 .gallery-img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -225,7 +217,7 @@
 
 .gallery-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(83, 33, 231, 0.5); /* matches your hover color */
+  box-shadow: 0 8px 20px rgba(83, 33, 231, 0.5); /* matches hover color */
 }
 
 /* Thumbnail Hover Effects */    
@@ -234,8 +226,8 @@
 }
 
 .img-thumbnail:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(83, 33, 231, 0.5); /* matches your hover color */
+  transform: scale(1.50);
+  box-shadow: 0 8px 20px rgba(83, 33, 231, 0.5); /* matches hover color */
 }
     
 /* Sticky, transparent navbar */
@@ -293,15 +285,38 @@
     transform: translateY(0);
   }
 }
+
+@media (min-width: 576px) {
+  #portfolioSite .secThree .contentBox  {
+	/*  height: 35%; */
+	padding: 20px;
+	}
+	
+  #portfolioSite .secHero {
+	background-size: contain; 
+	background-repeat: no-repeat;
+	background-position: 50% 14%; 
+	}
+	
+  .modal-media-xl {
+	width: 80vw;
+ 	max-width: 800px;
+	margin-right: auto;
+    margin-left: auto;
+	}
+	}
+	
+  }
+
 </style>
 
-<div id="portfolioSite" class="interactiveBs">
+<div id="portfolioSite" class="SiteBootStrap">
 
   <!-- Nav Bar -->
   <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
       <!-- Logo -->
-      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo" height="30"></a>
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo" width="40" style="width: 40px;"></a>
 
       <!-- Toggler for mobile -->
       <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -334,8 +349,8 @@
 		<div class="row">
 			<div class="col-lg-10 offset-2 lg-padding">
 				<div class="heroBox">
-				  <h1 class="fade-in-slide">I’m Jesus Gonzalez.</h1>
-				  <h2 class="fade-in-slide">A Visual Artist and Project Manager <span>based in North Carolina.</span></h2>
+				  <h1 class="fade-in-slide">I'm Jesus Gonzalez.</h1>
+				  <h2 class="fade-in-slide">A Visual Artist and<br> Project Manager <span>based in<br>North Carolina.</span></h2>
 				  <p class="fade-in-slide">I also do other cool stuff...</p>
 				</div>
 			</div>
@@ -559,7 +574,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-media-xl">
     <div class="modal-content bg-black border-0">
       <div class="modal-body p-0">
         <img src="#" alt="Full view" class="img-fluid w-100">
